@@ -1,0 +1,28 @@
+# Dokumen spesifikasi internal (tidak diunggah ke GitHub)
+PRD.md
+
+# Virtual environment Python
+.venv/
+mengolah_citra_upn/.venv/
+
+# Python bytecode dan cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Variabel environment dan konfigurasi lokal
+.env
+.env.*
+
+# Artefak IDE / editor
+.vscode/
+.idea/
+
+# Log, berkas sementara, dan artefak sistem
+*.log
+*.tmp
+*.bak
+*.swp
+Thumbs.db
+.DS_Store
