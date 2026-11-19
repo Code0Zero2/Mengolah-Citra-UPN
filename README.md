@@ -36,20 +36,36 @@ Aplikasi desktop pengolahan citra digital berbasis Python untuk membuka gambar d
 
 ## Instalasi dan Menjalankan Aplikasi (Windows PowerShell)
 
+Pastikan Anda berada pada direktori root proyek terlebih dahulu, lalu masuk ke folder aplikasi `mengolah_citra_upn/`:
+
 ```powershell
 cd mengolah_citra_upn
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python main.py
 ```
 
-Untuk menjalankan unit test filter:
+1. **Buat virtual environment** (lewati jika `.venv` sudah tersedia):
+   ```powershell
+   python -m venv .venv
+   ```
 
-```powershell
-python -m unittest discover -p "test_*.py" -v
-```
+2. **Aktifkan virtual environment di Windows PowerShell:**
+   ```powershell
+   .\.venv\Scripts\Activate.ps1
+   ```
 
+3. **Instal dependensi dari `requirements.txt`:**
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
+4. **Jalankan aplikasi:**
+   ```powershell
+   python main.py
+   ```
+
+5. **Jalankan unit test filter:**
+   ```powershell
+   python -m unittest discover -p "test_*.py" -v
+   ```
 ---
 
 ## Dokumentasi Lengkap
