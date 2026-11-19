@@ -116,17 +116,16 @@ cd mengolah_citra_upn
 
 ```text
 Mengolah Citra UPN/
-├── PRD.md                    # Dokumen spesifikasi kebutuhan produk
-└── mengolah_citra_upn/
-    ├── main.py               # Entry point aplikasi
-    ├── app.py                # Jendela utama, tata letak GUI, manajemen state, dan alur kerja
-    ├── filters.py            # Fungsi pengolahan citra murni (OpenCV & NumPy, BGR uint8)
-    ├── histogram.py          # Perhitungan dan panel histogram Matplotlib (TkAgg)
-    ├── camera.py             # Akses webcam (CameraSession), worker live, dan jendela Capture
-    ├── theme.py              # Konstanta warna, tipografi, ukuran jendela, dan spasi
-    ├── test_filters.py       # Unit test mandiri untuk seluruh fungsi pada filters.py
-    ├── requirements.txt      # Daftar dependensi Python
-    └── README.md             # Dokumentasi proyek
+├── PRD.md                    # Dokumen spesifikasi kebutuhan produk 
+├── main.py               # Entry point aplikasi
+├── app.py                # Jendela utama, tata letak GUI, manajemen state, dan alur kerja
+├── filters.py            # Fungsi pengolahan citra murni (OpenCV & NumPy, BGR uint8)
+├── histogram.py          # Perhitungan dan panel histogram Matplotlib (TkAgg)
+├── camera.py             # Akses webcam (CameraSession), worker live, dan jendela Capture
+├── theme.py              # Konstanta warna, tipografi, ukuran jendela, dan spasi
+├── test_filters.py       # Unit test mandiri untuk seluruh fungsi pada filters.py
+├── requirements.txt      # Daftar dependensi Python
+└── README.md             # Dokumentasi proyek
 ```
 
 ---
@@ -136,3 +135,10 @@ Mengolah Citra UPN/
 - Fitur `Open Camera` dan `Live Processing` mengakses webcam default dengan indeks `0` (`cv2.VideoCapture(0)`). Jika kamera tidak terpasang atau sedang dipakai aplikasi lain, aplikasi menampilkan pesan error pada status bar tanpa mengalami crash.
 - Filter komputasi berat seperti `Denoising` dengan metode `Bilateral` berkernel besar memiliki waktu pemrosesan per frame yang lebih tinggi dibandingkan filter ringan; worker `LiveFrameProcessor` selalu memproses frame terbaru saat idle agar antarmuka tetap responsif.
 - Pemrosesan dan penyimpanan citra (`Save File`) selalu menggunakan resolusi penuh dari `current_image`, sedangkan pratinjau tampilan dibatasi hingga dimensi maksimum `2000 px` agar UI tetap ringan untuk citra beresolusi besar.
+
+---
+
+## Menjalankan Aplikasi
+
+1. Pastikan komputer sudah terinstall python. Apabila belum bisa didownload pada [link berikut](https://www.python.org/downloads/). 
+2. Apabila sudah terinstall, buka terminal dan ketikkan: `python main.py`
